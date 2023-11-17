@@ -461,7 +461,7 @@ def place_bet(coordinate_dict, betsize):
 
 def check_new_game(coordinate_dict):
     global table_info
-    if super_match(coordinate_dict, 'reshuffle_label'):
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
         log_info('reshuffle!!!!!!!!!!!!')
         table_info['count'] = 0
         table_info['true_count'] = 0

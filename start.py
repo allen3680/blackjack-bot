@@ -55,7 +55,6 @@ def main():
     play_coordinate_dict = init_play_coordinate()
     initial()
     is_reshuffle = False
-    is_bet = False
     while True:
         try:
             if variable.paused:
@@ -66,15 +65,13 @@ def main():
             # 打牌
             if super_match(play_coordinate_dict, 'confirm_button'):
                 card_count_after(is_reshuffle)
-                if not is_bet:
+                if not super_rgb_match(play_coordinate_dict, 'place_bet_label'):
                     betsize = get_betsize()
                     place_bet(play_coordinate_dict, betsize)
-                    is_bet = True
                 sleep(0.3)
                 click(play_coordinate_dict, 'confirm_button')
                 is_reshuffle = False
             elif super_match(play_coordinate_dict, 'get_card_button'):
-                is_bet = False
                 play(play_coordinate_dict)
             # 遊戲結束
             elif super_match(play_coordinate_dict, 'dealer_21_label'):
