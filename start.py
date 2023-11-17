@@ -65,7 +65,7 @@ def main():
             # 打牌
             if super_match(play_coordinate_dict, 'confirm_button'):
                 card_count_after(is_reshuffle)
-                if not super_rgb_match(play_coordinate_dict, 'place_bet_label'):
+                if not super_rgb_match(play_coordinate_dict, 'player_one_place_bet_label'):
                     betsize = get_betsize()
                     place_bet(play_coordinate_dict, betsize)
                 sleep(0.3)
@@ -78,45 +78,44 @@ def main():
                 log_info('dealer_21_label')
                 sleep(3.5)
                 get_all_hand_img(play_coordinate_dict)
-                get_all_hand_value()
+                get_all_hand_value(play_coordinate_dict)
                 count_win_loss()
                 sleep(5)
             elif super_match(play_coordinate_dict, 'player_21_label') & super_rgb_match(play_coordinate_dict, 'player_one_layer_one_card_three') & (super_match(play_coordinate_dict, 'dealer_score_green_label') | super_match(play_coordinate_dict, 'dealer_score_grey_label')):
                 log_info('player_21_label')
                 sleep(3)
                 get_all_hand_img(play_coordinate_dict)
-                get_all_hand_value()
+                get_all_hand_value(play_coordinate_dict)
                 count_win_loss()
                 sleep(5)
             elif super_match(play_coordinate_dict, 'dealer_score_orange_label'):
                 log_info('dealer_score_orange_label')
                 sleep(3)
                 get_all_hand_img(play_coordinate_dict)
-                get_all_hand_value()
+                get_all_hand_value(play_coordinate_dict)
                 count_win_loss()
                 sleep(5)
             elif super_match(play_coordinate_dict, 'dealer_score_red_label') | super_match(play_coordinate_dict, 'dealer_score_green_label'):
                 log_info('dealer_score_red_label')
                 sleep(2)
                 get_all_hand_img(play_coordinate_dict)
-                get_all_hand_value()
+                get_all_hand_value(play_coordinate_dict)
                 count_win_loss()
                 sleep(5)
             elif super_match(play_coordinate_dict, 'player_one_score_red_label') & (super_match(play_coordinate_dict, 'dealer_score_green_label') | super_match(play_coordinate_dict, 'dealer_score_red_label') | super_match(play_coordinate_dict, 'dealer_score_grey_label')):
                 log_info('player_one_score_red_label')
                 sleep(1)
                 get_all_hand_img(play_coordinate_dict)
-                get_all_hand_value()
+                get_all_hand_value(play_coordinate_dict)
                 count_win_loss()
                 sleep(5)
             elif super_match(play_coordinate_dict, 'player_one_score_green_label') & (super_match(play_coordinate_dict, 'dealer_score_green_label') | super_match(play_coordinate_dict, 'dealer_score_red_label')):
                 log_info('player_one_score_green_label')
                 sleep(1)
                 get_all_hand_img(play_coordinate_dict)
-                get_all_hand_value()
+                get_all_hand_value(play_coordinate_dict)
                 count_win_loss()
                 sleep(5)
-
             if super_match(play_coordinate_dict, 'dont_buy_insurance_button'):
                 decide_to_buy_insurance()
         except Exception:

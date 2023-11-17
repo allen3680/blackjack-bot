@@ -1,0 +1,1320 @@
+2023-11-18 02:28:14 [INFO] start
+2023-11-18 02:28:14 [INFO] count: 0
+2023-11-18 02:28:14 [INFO] true_count: 0.0
+2023-11-18 02:28:14 [INFO] count_for_insurance: 0
+2023-11-18 02:28:14 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:28:15 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 120, in main
+    if super_match(play_coordinate_dict, 'dont_buy_insurance_button'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 02:28:16 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 120, in main
+    if super_match(play_coordinate_dict, 'dont_buy_insurance_button'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 02:28:17 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 120, in main
+    if super_match(play_coordinate_dict, 'dont_buy_insurance_button'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 02:28:17 [INFO] stop
+2023-11-18 02:28:17 [INFO] stop
+2023-11-18 02:30:04 [INFO] start
+2023-11-18 02:30:16 [INFO] dealer_score_red_label
+2023-11-18 02:30:18 [INFO] 結束後 Dealer牌數: 3
+2023-11-18 02:30:18 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    get_all_hand_img(play_coordinate_dict)
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 124, in get_all_hand_img
+    if super_match(coordinate_dict, 'seat_' + player + '_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 02:30:19 [INFO] dealer_score_red_label
+2023-11-18 02:30:20 [INFO] stop
+2023-11-18 02:30:20 [INFO] stop
+2023-11-18 02:30:21 [INFO] 結束後 Dealer牌數: 3
+2023-11-18 02:30:21 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    get_all_hand_img(play_coordinate_dict)
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 124, in get_all_hand_img
+    if super_match(coordinate_dict, 'seat_' + player + '_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 02:30:28 [INFO] start
+2023-11-18 02:30:28 [INFO] count: 0
+2023-11-18 02:30:28 [INFO] true_count: 0.0
+2023-11-18 02:30:28 [INFO] count_for_insurance: 0
+2023-11-18 02:30:28 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:30:29 [INFO] count: 0
+2023-11-18 02:30:29 [INFO] true_count: 0.0
+2023-11-18 02:30:29 [INFO] count_for_insurance: 0
+2023-11-18 02:30:29 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:30:37 [INFO] stop
+2023-11-18 02:30:56 [INFO] start
+2023-11-18 02:30:58 [INFO] start
+2023-11-18 02:31:01 [INFO] stop
+2023-11-18 02:31:01 [INFO] stop
+2023-11-18 02:31:33 [INFO] start
+2023-11-18 02:31:33 [INFO] start
+2023-11-18 02:31:34 [INFO] count: 0
+2023-11-18 02:31:34 [INFO] true_count: 0.0
+2023-11-18 02:31:34 [INFO] count_for_insurance: 0
+2023-11-18 02:31:34 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:31:35 [INFO] stop
+2023-11-18 02:31:36 [INFO] stop
+2023-11-18 02:31:37 [INFO] start
+2023-11-18 02:31:37 [INFO] start
+2023-11-18 02:31:43 [INFO] play
+2023-11-18 02:31:44 [INFO] 進行中 dealer_hand_one: Queen
+2023-11-18 02:31:44 [INFO] 進行中 player: one的層數: one, 牌數: 2
+2023-11-18 02:31:45 [INFO] 進行中 player_one_hand_one: Seven
+2023-11-18 02:31:45 [INFO] 進行中 player_one_hand_two: Two
+2023-11-18 02:31:45 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 75, in main
+    play(play_coordinate_dict)
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 49, in play
+    player = create_player()
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 45, in create_player
+    player.add_card(table_info['player_' + player + '_hand_' + hand])
+    ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'add_card'
+
+2023-11-18 02:31:45 [INFO] play
+2023-11-18 02:31:46 [INFO] 進行中 dealer_hand_one: Queen
+2023-11-18 02:31:47 [INFO] 進行中 player: one的層數: one, 牌數: 2
+2023-11-18 02:31:47 [INFO] 進行中 player_one_hand_one: Seven
+2023-11-18 02:31:47 [INFO] 進行中 player_one_hand_two: Two
+2023-11-18 02:31:47 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 75, in main
+    play(play_coordinate_dict)
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 49, in play
+    player = create_player()
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 45, in create_player
+    player.add_card(table_info['player_' + player + '_hand_' + hand])
+    ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'add_card'
+
+2023-11-18 02:31:47 [INFO] play
+2023-11-18 02:31:48 [INFO] stop
+2023-11-18 02:31:48 [INFO] stop
+2023-11-18 02:31:48 [INFO] 進行中 dealer_hand_one: Queen
+2023-11-18 02:31:49 [INFO] 進行中 player: one的層數: one, 牌數: 2
+2023-11-18 02:31:49 [INFO] 進行中 player_one_hand_one: Seven
+2023-11-18 02:31:49 [INFO] 進行中 player_one_hand_two: Two
+2023-11-18 02:31:49 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 75, in main
+    play(play_coordinate_dict)
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 49, in play
+    player = create_player()
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 45, in create_player
+    player.add_card(table_info['player_' + player + '_hand_' + hand])
+    ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'add_card'
+
+2023-11-18 02:36:59 [INFO] start
+2023-11-18 02:36:59 [INFO] count: 0
+2023-11-18 02:36:59 [INFO] true_count: 0.0
+2023-11-18 02:36:59 [INFO] count_for_insurance: 0
+2023-11-18 02:36:59 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:36:59 [INFO] start
+2023-11-18 02:37:05 [INFO] play
+2023-11-18 02:37:06 [INFO] 進行中 dealer_hand_one: Seven
+2023-11-18 02:37:07 [INFO] 進行中 player: one的層數: one, 牌數: 2
+2023-11-18 02:37:07 [INFO] 進行中 player_one_hand_one: Three
+2023-11-18 02:37:07 [INFO] 進行中 player_one_hand_two: Ace
+2023-11-18 02:37:07 [INFO] action: Action.GetCard
+2023-11-18 02:37:09 [INFO] play finish
+2023-11-18 02:37:28 [INFO] dealer_score_red_label
+2023-11-18 02:37:31 [INFO] 結束後 Dealer牌數: 3
+2023-11-18 02:37:31 [INFO] 結束後 player: one的層數: one, 牌數: 4
+2023-11-18 02:37:31 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    get_all_hand_img(play_coordinate_dict)
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 133, in get_all_hand_img
+    if super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_1') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_2') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_3') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_4'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 122, in super_rgb_match
+    return rgb_match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 108, in rgb_match
+    im_original = Image.open(original_pic)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PIL\Image.py", line 3236, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './screenshot/original/player_two_layer_two_card_one_1_original.png'
+
+2023-11-18 02:37:32 [INFO] dealer_score_red_label
+2023-11-18 02:37:33 [INFO] stop
+2023-11-18 02:37:33 [INFO] stop
+2023-11-18 02:37:34 [INFO] 結束後 Dealer牌數: 2
+2023-11-18 02:37:34 [INFO] 結束後 player: one的層數: one, 牌數: 2
+2023-11-18 02:37:34 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    get_all_hand_img(play_coordinate_dict)
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 133, in get_all_hand_img
+    if super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_1') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_2') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_3') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_4'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 122, in super_rgb_match
+    return rgb_match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 108, in rgb_match
+    im_original = Image.open(original_pic)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PIL\Image.py", line 3236, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './screenshot/original/player_two_layer_two_card_one_1_original.png'
+
+2023-11-18 02:51:54 [INFO] start
+2023-11-18 02:51:54 [INFO] start
+2023-11-18 02:51:57 [INFO] dealer_score_red_label
+2023-11-18 02:52:00 [INFO] 結束後 Dealer牌數: 3
+2023-11-18 02:52:00 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    player_count = get_all_hand_img(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 125, in get_all_hand_img
+    if super_match(coordinate_dict, 'player_' + player + '_place_bet_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:652: error: (-215:Assertion failed) type2 == CV_64F && (sz2.height == 1 || sz2.height == 4) in function 'cv::arithm_op'
+
+
+2023-11-18 02:52:00 [INFO] dealer_score_red_label
+2023-11-18 02:52:02 [INFO] stop
+2023-11-18 02:52:02 [INFO] stop
+2023-11-18 02:52:03 [INFO] 結束後 Dealer牌數: 3
+2023-11-18 02:52:03 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    player_count = get_all_hand_img(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 125, in get_all_hand_img
+    if super_match(coordinate_dict, 'player_' + player + '_place_bet_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:652: error: (-215:Assertion failed) type2 == CV_64F && (sz2.height == 1 || sz2.height == 4) in function 'cv::arithm_op'
+
+
+2023-11-18 02:53:00 [INFO] start
+2023-11-18 02:53:00 [INFO] count: 0
+2023-11-18 02:53:00 [INFO] true_count: 0.0
+2023-11-18 02:53:00 [INFO] count_for_insurance: 0
+2023-11-18 02:53:00 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:53:01 [INFO] count: 0
+2023-11-18 02:53:01 [INFO] true_count: 0.0
+2023-11-18 02:53:01 [INFO] count_for_insurance: 0
+2023-11-18 02:53:01 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:53:02 [INFO] count: 0
+2023-11-18 02:53:02 [INFO] true_count: 0.0
+2023-11-18 02:53:02 [INFO] count_for_insurance: 0
+2023-11-18 02:53:02 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:53:16 [INFO] dealer_score_red_label
+2023-11-18 02:53:18 [INFO] 結束後 Dealer牌數: 4
+2023-11-18 02:53:19 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    player_count = get_all_hand_img(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 135, in get_all_hand_img
+    if super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_1') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_2') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_3') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_4'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 122, in super_rgb_match
+    return rgb_match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 108, in rgb_match
+    im_original = Image.open(original_pic)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PIL\Image.py", line 3236, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './screenshot/original/player_two_layer_two_card_one_1_original.png'
+
+2023-11-18 02:53:19 [INFO] dealer_score_red_label
+2023-11-18 02:53:20 [INFO] stop
+2023-11-18 02:53:20 [INFO] stop
+2023-11-18 02:53:22 [INFO] 結束後 Dealer牌數: 2
+2023-11-18 02:53:22 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    player_count = get_all_hand_img(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 135, in get_all_hand_img
+    if super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_1') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_2') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_3') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_4'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 119, in super_rgb_match
+    temp_region = coordinate_dict[name].split(',')
+                  ~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'player_one_layer_three_card_one_1'
+
+2023-11-18 02:53:25 [INFO] start
+2023-11-18 02:53:25 [INFO] count: 0
+2023-11-18 02:53:25 [INFO] true_count: 0.0
+2023-11-18 02:53:25 [INFO] count_for_insurance: 0
+2023-11-18 02:53:25 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:53:26 [INFO] count: 0
+2023-11-18 02:53:26 [INFO] true_count: 0.0
+2023-11-18 02:53:26 [INFO] count_for_insurance: 0
+2023-11-18 02:53:26 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:53:27 [INFO] count: 0
+2023-11-18 02:53:27 [INFO] true_count: 0.0
+2023-11-18 02:53:27 [INFO] count_for_insurance: 0
+2023-11-18 02:53:27 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:53:29 [INFO] count: 0
+2023-11-18 02:53:29 [INFO] true_count: 0.0
+2023-11-18 02:53:29 [INFO] count_for_insurance: 0
+2023-11-18 02:53:29 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:53:33 [INFO] stop
+2023-11-18 02:53:58 [INFO] start
+2023-11-18 02:53:59 [INFO] count: 0
+2023-11-18 02:53:59 [INFO] true_count: 0.0
+2023-11-18 02:53:59 [INFO] count_for_insurance: 0
+2023-11-18 02:53:59 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:54:00 [INFO] count: 0
+2023-11-18 02:54:00 [INFO] true_count: 0.0
+2023-11-18 02:54:00 [INFO] count_for_insurance: 0
+2023-11-18 02:54:00 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:54:01 [INFO] count: 0
+2023-11-18 02:54:01 [INFO] true_count: 0.0
+2023-11-18 02:54:01 [INFO] count_for_insurance: 0
+2023-11-18 02:54:01 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:54:02 [INFO] count: 0
+2023-11-18 02:54:02 [INFO] true_count: 0.0
+2023-11-18 02:54:02 [INFO] count_for_insurance: 0
+2023-11-18 02:54:02 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:54:05 [INFO] stop
+2023-11-18 02:54:05 [INFO] stop
+2023-11-18 02:55:28 [INFO] start
+2023-11-18 02:55:28 [INFO] count: 0
+2023-11-18 02:55:28 [INFO] true_count: 0.0
+2023-11-18 02:55:28 [INFO] count_for_insurance: 0
+2023-11-18 02:55:28 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:55:29 [INFO] start
+2023-11-18 02:55:36 [INFO] play
+2023-11-18 02:55:37 [INFO] 進行中 dealer_hand_one: Jack
+2023-11-18 02:55:37 [INFO] 進行中 player: one的層數: one, 牌數: 2
+2023-11-18 02:55:37 [INFO] 進行中 player_one_hand_one: Eight
+2023-11-18 02:55:37 [INFO] 進行中 player_one_hand_two: Four
+2023-11-18 02:55:37 [INFO] action: Action.GetCard
+2023-11-18 02:55:39 [INFO] play finish
+2023-11-18 02:55:40 [INFO] play
+2023-11-18 02:55:41 [INFO] 進行中 dealer_hand_one: Jack
+2023-11-18 02:55:41 [INFO] 進行中 player: one的層數: one, 牌數: 2
+2023-11-18 02:55:41 [INFO] 進行中 player_one_hand_one: Eight
+2023-11-18 02:55:41 [INFO] 進行中 player_one_hand_two: Four
+2023-11-18 02:55:41 [INFO] action: Action.GetCard
+2023-11-18 02:55:44 [INFO] play finish
+2023-11-18 02:55:57 [INFO] dealer_score_red_label
+2023-11-18 02:55:59 [INFO] 結束後 Dealer牌數: 3
+2023-11-18 02:56:00 [INFO] 結束後 player: one的層數: one, 牌數: 3
+2023-11-18 02:56:00 [INFO] 結束後 dealer_hand_one: Jack
+2023-11-18 02:56:00 [INFO] 結束後 dealer_hand_two: Five
+2023-11-18 02:56:00 [INFO] 結束後 dealer_hand_three: Jack
+2023-11-18 02:56:00 [INFO] 結束後 player_one_layer_one_hand_one: Eight
+2023-11-18 02:56:00 [INFO] 結束後 player_one_layer_one_hand_two: Four
+2023-11-18 02:56:00 [INFO] 結束後 player_one_layer_one_hand_three: Seven
+2023-11-18 02:56:00 [INFO] right_win_count: 0
+2023-11-18 02:56:00 [INFO] right_lose_count: 0
+2023-11-18 02:56:00 [INFO] middle_win_count: 0
+2023-11-18 02:56:00 [INFO] middle_lose_count: 0
+2023-11-18 02:56:06 [INFO] count: 3.0
+2023-11-18 02:56:06 [INFO] true_count: 0.5098039215686274
+2023-11-18 02:56:06 [INFO] count_for_insurance: 2
+2023-11-18 02:56:06 [INFO] true_count_for_insurance: 0.3398692810457516
+2023-11-18 02:56:13 [INFO] play
+2023-11-18 02:56:14 [INFO] 進行中 dealer_hand_one: King
+2023-11-18 02:56:15 [INFO] 進行中 player: one的層數: one, 牌數: 2
+2023-11-18 02:56:15 [INFO] 進行中 player_one_hand_one: Six
+2023-11-18 02:56:15 [INFO] 進行中 player_one_hand_two: Five
+2023-11-18 02:56:15 [INFO] action: Action.Double
+2023-11-18 02:56:15 [INFO] play finish
+2023-11-18 02:56:20 [INFO] stop
+2023-11-18 02:56:20 [INFO] stop
+2023-11-18 02:58:03 [INFO] start
+2023-11-18 02:58:07 [INFO] dealer_21_label
+2023-11-18 02:58:11 [INFO] 結束後 Dealer牌數: 2
+2023-11-18 02:58:11 [INFO] 結束後 player: one的層數: one, 牌數: 2
+2023-11-18 02:58:11 [INFO] 結束後 dealer_hand_one: Ten
+2023-11-18 02:58:11 [INFO] 結束後 dealer_hand_two: Ace
+2023-11-18 02:58:11 [INFO] 結束後 player_one_layer_one_hand_one: Four
+2023-11-18 02:58:11 [INFO] 結束後 player_one_layer_one_hand_two: Six
+2023-11-18 02:58:11 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 82, in main
+    count_win_loss()
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 524, in count_win_loss
+    if (not table_info['bet_right']) & (not table_info['bet_middle']):
+            ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'bet_right'
+
+2023-11-18 02:58:12 [INFO] dealer_21_label
+2023-11-18 02:58:16 [INFO] 結束後 Dealer牌數: 2
+2023-11-18 02:58:16 [INFO] unknown card!!!!!! card: ee
+2023-11-18 02:58:16 [INFO] 結束後 dealer_hand_one: 
+2023-11-18 02:58:16 [INFO] unknown card!!!!!! card: y/
+2023-11-18 02:58:16 [INFO] 結束後 dealer_hand_two: 
+2023-11-18 02:58:16 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 82, in main
+    count_win_loss()
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 524, in count_win_loss
+    if (not table_info['bet_right']) & (not table_info['bet_middle']):
+            ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'bet_right'
+
+2023-11-18 02:58:17 [INFO] count: 0
+2023-11-18 02:58:17 [INFO] true_count: 0.0
+2023-11-18 02:58:17 [INFO] count_for_insurance: 0
+2023-11-18 02:58:17 [INFO] true_count_for_insurance: 0.0
+2023-11-18 02:58:22 [INFO] play
+2023-11-18 02:58:23 [INFO] 進行中 dealer_hand_one: Five
+2023-11-18 02:58:23 [INFO] 進行中 player: one的層數: one, 牌數: 2
+2023-11-18 02:58:23 [INFO] 進行中 player_one_hand_one: Nine
+2023-11-18 02:58:23 [INFO] 進行中 player_one_hand_two: Seven
+2023-11-18 02:58:23 [INFO] action: Action.Stop
+2023-11-18 02:58:23 [INFO] play finish
+2023-11-18 02:58:31 [INFO] dealer_score_red_label
+2023-11-18 02:58:33 [INFO] 結束後 Dealer牌數: 3
+2023-11-18 02:58:34 [INFO] 結束後 player: one的層數: one, 牌數: 2
+2023-11-18 02:58:34 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 101, in main
+    get_all_hand_img(play_coordinate_dict)
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 133, in get_all_hand_img
+    if super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_1') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_2') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_3') | super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer_convert[layer] + '_card_one_4'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 122, in super_rgb_match
+    return rgb_match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 108, in rgb_match
+    im_original = Image.open(original_pic)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PIL\Image.py", line 3236, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './screenshot/original/player_three_layer_two_card_one_1_original.png'
+
+2023-11-18 02:58:35 [INFO] dealer_score_red_label
+2023-11-18 02:58:36 [INFO] stop
+2023-11-18 02:58:37 [INFO] stop
+2023-11-18 02:58:37 [INFO] 結束後 Dealer牌數: 2
+2023-11-18 02:58:37 [INFO] unknown card!!!!!! card: ee
+2023-11-18 02:58:37 [INFO] 結束後 dealer_hand_one: 
+2023-11-18 02:58:37 [INFO] unknown card!!!!!! card: y/
+2023-11-18 02:58:37 [INFO] 結束後 dealer_hand_two: 
+2023-11-18 02:58:37 [INFO] right_win_count: 0
+2023-11-18 02:58:37 [INFO] right_lose_count: 0
+2023-11-18 02:58:37 [INFO] middle_win_count: 0
+2023-11-18 02:58:37 [INFO] middle_lose_count: 0
+2023-11-18 03:11:40 [INFO] start
+2023-11-18 03:11:41 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:41 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:42 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:42 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:43 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:43 [INFO] start
+2023-11-18 03:11:43 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:44 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:44 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:45 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:45 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:46 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:46 [INFO] start
+2023-11-18 03:11:46 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:47 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:47 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:48 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:49 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:49 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:50 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:50 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:51 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:51 [INFO] start
+2023-11-18 03:11:51 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:52 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:52 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:53 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:53 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:54 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:54 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:55 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:55 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:56 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:57 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:57 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:57 [INFO] start
+2023-11-18 03:11:58 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:58 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:59 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:11:59 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:00 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:00 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:01 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:01 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:02 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:02 [INFO] start
+2023-11-18 03:12:02 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:03 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:03 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:04 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:05 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:05 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:06 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:06 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:06 [INFO] start
+2023-11-18 03:12:07 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:07 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:08 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:08 [WARNING] error:Traceback (most recent call last):
+  File "C:\Users\allen\bot\blackjack-bot\start.py", line 64, in main
+    is_reshuffle = check_new_game(play_coordinate_dict)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\action.py", line 467, in check_new_game
+    if super_match(coordinate_dict, 'reshuffle_label') | super_match(coordinate_dict, 'full_deck_label'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 84, in super_match
+    return match('./screenshot/' + name + '_new.png',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allen\bot\blackjack-bot\tool.py", line 72, in match
+    difference1 = cv.subtract(image1, image2)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.7.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\arithm.cpp:650: error: (-209:Sizes of input arguments do not match) The operation is neither 'array op array' (where arrays have the same size and the same number of channels), nor 'array op scalar', nor 'scalar op array' in function 'cv::arithm_op'
+
+
+2023-11-18 03:12:17 [INFO] dealer_score_red_label
+2023-11-18 03:12:19 [INFO] 結束後 Dealer牌數: 2
+2023-11-18 03:12:19 [INFO] 結束後 dealer_hand_one: King
+2023-11-18 03:12:20 [INFO] 結束後 dealer_hand_two: Eight
+2023-11-18 03:12:20 [INFO] right_win_count: 0
+2023-11-18 03:12:20 [INFO] right_lose_count: 0
+2023-11-18 03:12:20 [INFO] middle_win_count: 0
+2023-11-18 03:12:20 [INFO] middle_lose_count: 0

@@ -30,7 +30,7 @@ def initial():
             table_info['player_' + player + '_hand_' + hand] = ''
     for player in ['one', 'two', 'three', 'four']:
         table_info['player_' + player + '_layer'] = ''
-        for layer in ['one', 'two', 'three', 'four', 'five']:
+        for layer in ['one', 'two', 'three', 'four']:
             table_info['player_' + player + '_layer_' + layer + '_card'] = 0
             table_info['player_' + player + '_layer_' + layer + '_is_double'] = False
             for hand in ['one', 'two', 'three', 'four', 'five']:
@@ -38,19 +38,19 @@ def initial():
 
 def create_player():
     global table_info
-    player = Player()
+    new_player = Player()
     for player in ['one']:
         for hand in ['one', 'two', 'three', 'four', 'five']:
             if table_info['player_' + player + '_hand_' + hand] in ranks:
-                player.add_card(table_info['player_' + player + '_hand_' + hand])
-    player.adjust_for_ace()
-    return player
+                new_player.add_card(table_info['player_' + player + '_hand_' + hand])
+    new_player.adjust_for_ace()
+    return new_player
 
 def get_hand(coordinate_dict):
     global table_info
-    layer_convert = {'one': 'two', 'two': 'three', 'three': 'four', 'four': 'five', 'five': ''}
+    layer_convert = {'one': 'two', 'two': 'three', 'three': 'four', 'four': ''}
     card_convert = {'three': 2, 'four': 3, 'five': 4}
-    offset_convert = {'one': 0, 'two': -41, 'three': -82, 'four': -123, 'five': -164}
+    offset_convert = {'one': 0, 'two': -41, 'three': -82, 'four': -123}
     hand_num_list = ['one', 'two', 'three', 'four', 'five']
     # Dealer
     for hand in ['one', 'two', 'three', 'four', 'five']:
@@ -61,15 +61,15 @@ def get_hand(coordinate_dict):
     for player in ['one']:
         # 初始化
         table_info['player_' + player + '_layer'] = ''
-        for layer in ['one', 'two', 'three', 'four', 'five']:
+        for layer in ['one', 'two', 'three', 'four']:
             table_info['player_' + player + '_layer_' + layer + '_card'] = 0
             table_info['player_' + player + '_layer_' + layer + '_is_double'] = False
         for hand in ['one', 'two', 'three', 'four', 'five']:
             table_info['player_' + player + '_hand_' + hand] = ''
         # 判斷層數
         is_layer_match = False
-        for layer in ['one', 'two', 'three', 'four', 'five']:
-            if (layer == 'five') & (not is_layer_match):
+        for layer in ['one', 'two', 'three', 'four']:
+            if (layer == 'four') & (not is_layer_match):
                 table_info['player_' + player + '_layer'] = layer
                 break
             else:
@@ -97,14 +97,14 @@ def get_hand(coordinate_dict):
 
 def get_all_hand_img(coordinate_dict):
     global table_info
-    layer_convert = {'one': 'two', 'two': 'three', 'three': 'four', 'four': 'five', 'five': ''}
+    layer_convert = {'one': 'two', 'two': 'three', 'three': 'four', 'four': ''}
     card_convert = {'three': 2, 'four': 3, 'five': 4}
-    offset_convert = {'one': 0, 'two': -41, 'three': -82, 'four': -123, 'five': -164}
+    offset_convert = {'one': 0, 'two': -41, 'three': -82, 'four': -123}
     hand_num_list = ['one', 'two', 'three', 'four', 'five']
     # 初始化
     for player in ['one', 'two', 'three', 'four']:
         table_info['player_' + player + '_layer'] = ''
-        for layer in ['one', 'two', 'three', 'four', 'five']:
+        for layer in ['one', 'two', 'three', 'four']:
             table_info['player_' + player + '_layer_' + layer + '_card'] = 0
             table_info['player_' + player + '_layer_' + layer + '_is_double'] = False
     # Dealer
@@ -121,10 +121,12 @@ def get_all_hand_img(coordinate_dict):
     log_info('結束後 Dealer牌數: ' + str(table_info['dealer_layer']))
     # Player
     for player in ['one', 'two', 'three', 'four']:
+        if not super_match(coordinate_dict, 'player_' + player + '_place_bet_label'):
+            continue
         # 判斷層數
         is_layer_match = False
-        for layer in ['one', 'two', 'three', 'four', 'five']:
-            if (layer == 'five') & (not is_layer_match):
+        for layer in ['one', 'two', 'three', 'four']:
+            if (layer == 'four') & (not is_layer_match):
                 table_info['player_' + player + '_layer'] = layer
                 break
             else:
@@ -133,7 +135,7 @@ def get_all_hand_img(coordinate_dict):
                     table_info['player_' + player + '_layer'] = layer
                     break
         # 判斷牌數
-        for layer in ['one', 'two', 'three', 'four', 'five']:
+        for layer in ['one', 'two', 'three', 'four']:
             is_card_match = False
             for card in ['three', 'four', 'five']:
                 if super_rgb_match(coordinate_dict, 'player_' + player + '_layer_' + layer + '_card_' + card):
@@ -146,7 +148,7 @@ def get_all_hand_img(coordinate_dict):
                 break
         log_info('結束後 player: ' + player + '的層數: ' + str(table_info['player_' + player + '_layer']) + ', 牌數: ' + str(table_info['player_' + player + '_layer_' + layer + '_card']))
         # 截圖
-        for layer in ['one', 'two', 'three', 'four', 'five']:
+        for layer in ['one', 'two', 'three', 'four']:
             # Double
             if super_match(coordinate_dict, 'player_' + player + '_layer_' + layer + '_double_label'):
                 table_info['player_' + player + '_layer_' + layer + '_is_double'] = True
@@ -159,14 +161,14 @@ def get_all_hand_img(coordinate_dict):
                 break
     return
 
-def get_all_hand_value():
+def get_all_hand_value(coordinate_dict):
     global table_info
     hand_num_list = ['one', 'two', 'three', 'four', 'five']
     # 初始化
     for hand in ['one', 'two', 'three', 'four', 'five']:
         table_info['dealer_hand_' + hand] = ''
     for player in ['one', 'two', 'three', 'four']:
-        for layer in ['one', 'two', 'three', 'four', 'five']:
+        for layer in ['one', 'two', 'three', 'four']:
             for hand in ['one', 'two', 'three', 'four', 'five']:
                 table_info['player_' + player + '_layer_' + layer + '_hand_' + hand] = ''
     # Dealer
@@ -175,8 +177,10 @@ def get_all_hand_value():
         log_info('結束後 dealer_hand_' + hand_num_list[i] + ': ' + str(table_info['dealer_hand_' + hand_num_list[i]]))
     # Player
     for player in ['one', 'two', 'three', 'four']:
+        if not super_match(coordinate_dict, 'player_' + player + '_place_bet_label'):
+            continue
         # 辨識牌面
-        for layer in ['one', 'two', 'three', 'four', 'five']:
+        for layer in ['one', 'two', 'three', 'four']:
             # Other
             for i in range(table_info['player_' + player + '_layer_' + layer + '_card']):
                 table_info['player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i]] = card_transfer(ocr_basic('./screenshot/player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i] + '_new.png'))
@@ -400,7 +404,7 @@ def card_count_after(is_reshuffle):
             table_info['count_for_insurance'] -= 2
     # Player
     for player in ['one', 'two', 'three', 'four']:
-        for layer in ['one', 'two', 'three', 'four', 'five']:
+        for layer in ['one', 'two', 'three', 'four']:
             for hand in ['one', 'two', 'three', 'four', 'five']:
                 player_hand = table_info['player_' + player + '_layer_' + layer + '_hand_' + hand]
                 if player_hand != '':
@@ -417,7 +421,6 @@ def card_count_after(is_reshuffle):
                     table_info['count'] -= 0.5
                 elif player_hand in ['Ten', 'Eleven', 'Queen', 'King', 'Ace']:
                     table_info['count'] -= 1
-                    
                 if dealer_hand in ['Four', 'Five']:
                     table_info['count_for_insurance'] += 2
                 elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
@@ -489,7 +492,7 @@ def card_transfer(card):
         return 'Ace'
     elif card == '2':
         return 'Two'
-    elif card == '3':
+    elif card in ['3', '3)']:
         return 'Three'
     elif card == '4':
         return 'Four'
@@ -540,8 +543,6 @@ def count_win_loss():
             layer = 'three'
         elif i == 4:
             layer = 'four'
-        elif i == 5:
-            layer = 'five'
         player = Player()
         # for j in range(1, int(str(table_info['player_one_layer'])[1]) + 2):
         for j in range(1, 6):
