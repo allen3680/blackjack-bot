@@ -324,10 +324,14 @@ def add_card_or_not(player, dealer_card):
             return [True,False]
     elif(player.score == 11):
         # print('point 11')
-        if (table_info['true_count'] < 3) & (dealer_card == 11):
-            return [True,False]
-        else:
+        if dealer_card >=2 and dealer_card <= 10:
             return [True,True]
+        else:
+            return [True,False]
+        # if (table_info['true_count'] < 3) & (dealer_card == 11):
+        #     return [True,False]
+        # else:
+        #     return [True,True]
     elif(player.score == 12):
         # print('point 12')
         if dealer_card >= 4 and dealer_card <= 6:
