@@ -172,6 +172,7 @@ def get_all_hand_value(coordinate_dict):
             for hand in ['one', 'two', 'three', 'four', 'five']:
                 table_info['player_' + player + '_layer_' + layer + '_hand_' + hand] = ''
     # Dealer
+    log_info('Dealer')
     for i in range(table_info['dealer_layer']):
         table_info['dealer_hand_' + hand_num_list[i]] = card_transfer(ocr_basic('./screenshot/dealer_hand_' + hand_num_list[i] + '_new.png'))
         log_info('結束後 dealer_hand_' + hand_num_list[i] + ': ' + str(table_info['dealer_hand_' + hand_num_list[i]]))
@@ -179,6 +180,7 @@ def get_all_hand_value(coordinate_dict):
     for player in ['one', 'two', 'three', 'four']:
         if not super_match(coordinate_dict, 'player_' + player + '_place_bet_label'):
             continue
+        log_info('Player ' + player)
         # 辨識牌面
         for layer in ['one', 'two', 'three', 'four']:
             # Other
@@ -235,7 +237,7 @@ def decide_splitting(player, dealer_card):
     
 def add_card_or_not(player, dealer_card):
     # print('min', player.get_min_score())
-    if player.get_min_score() <= 14 and (len(player.hand) == 4):
+    if player.get_min_score() <= 11 and (len(player.hand) == 4):
         return [True,False]
     elif player.get_min_score() == 3 and player.aces > 0:
         # print('a2')
@@ -510,7 +512,7 @@ def card_transfer(card):
         return 'Ten'
     elif card == 'J':
         return 'Jack'
-    elif card == 'Q':
+    elif card in ['Q', 'e]']:
         return 'Queen'
     elif card == 'K':
         return 'King'
