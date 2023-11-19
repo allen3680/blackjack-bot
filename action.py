@@ -397,7 +397,7 @@ def card_count_after(is_reshuffle):
             pass
         elif dealer_hand == 'Nine':
             table_info['count'] -= 0.5
-        elif dealer_hand in ['Ten', 'Eleven', 'Queen', 'King', 'Ace']:
+        elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
             table_info['count'] -= 1
 
         if dealer_hand in ['Four', 'Five']:
@@ -406,7 +406,7 @@ def card_count_after(is_reshuffle):
             table_info['count_for_insurance'] += 1
         elif dealer_hand in ['Eight', 'Nine', 'Ace']:
             pass
-        elif dealer_hand in ['Ten', 'Eleven', 'Queen', 'King']:
+        elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King']:
             table_info['count_for_insurance'] -= 2
     # Player
     for player in ['one', 'two', 'three', 'four']:
@@ -447,9 +447,9 @@ def get_betsize():
     betsize = [Betsize.Left, 1]
     table_info['bet_middle'] = False
     table_info['bet_right'] = False
-    if table_info['true_count'] < 2:
+    if table_info['true_count'] < 1.5:
         betsize = [Betsize.Left, 1]
-    elif (table_info['true_count'] >= 2) & (table_info['true_count'] < 4):
+    elif (table_info['true_count'] >= 1.5) & (table_info['true_count'] < 4):
         betsize = [Betsize.Middle, 1]
         table_info['bet_middle'] = True
     elif (table_info['true_count'] >= 4) & (table_info['true_count'] < 6):
