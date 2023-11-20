@@ -231,7 +231,14 @@ def decide_splitting(player, dealer_card):
         else:
             return False
     elif card_values[player.hand[0]] == 10:
-        return False
+        if (dealer_card == 4) & (table_info['true_count'] >= 6):
+            return True
+        elif (dealer_card == 5) & (table_info['true_count'] >= 5):
+            return True
+        elif (dealer_card == 6) & (table_info['true_count'] >= 4):
+            return True
+        else:
+            return False
     else:
         return True
     
@@ -281,6 +288,8 @@ def add_card_or_not(player, dealer_card):
         # print('a8')
         if dealer_card == 6:
             return [True,True]
+        elif (dealer_card == 4) & (table_info['true_count'] >= 3):
+            return [True,True]
         else:
             return [False,False]
     elif  player.get_min_score() == 10 and player.aces > 0:
@@ -312,7 +321,17 @@ def add_card_or_not(player, dealer_card):
         return [True,False]
     elif(player.score == 9):
         # print('point 9')
-        if dealer_card >=3 and dealer_card <= 6:
+        if dealer_card == 2:
+            if table_info['true_count'] >= 1:
+                return [True,True]
+            else:
+                return [True,False]
+        elif dealer_card == 7:
+            if table_info['true_count'] >= 3:
+                return [True,True]
+            else:
+                return [True,False]
+        elif dealer_card >=3 and dealer_card <= 6:
             return [True,True]
         else:
             return [True,False]
@@ -320,28 +339,106 @@ def add_card_or_not(player, dealer_card):
         # print('point 10')
         if dealer_card >=2 and dealer_card <= 9:
             return [True,True]
+        elif dealer_card == 10:
+            if table_info['true_count'] >= 4:
+                return [True,True]
+            else:
+                return [True,False]
+        elif dealer_card == 11:
+            if table_info['true_count'] >= 4:
+                return [True,True]
+            else:
+                return [True,False]
         else:
             return [True,False]
     elif(player.score == 11):
         # print('point 11')
         if dealer_card >=2 and dealer_card <= 10:
             return [True,True]
+        elif dealer_card == 11:
+            if table_info['true_count'] >= 1:
+                return [True,True]
+            else:
+                return [True,False]
         else:
             return [True,False]
-        # if (table_info['true_count'] < 3) & (dealer_card == 11):
-        #     return [True,False]
-        # else:
-        #     return [True,True]
     elif(player.score == 12):
         # print('point 12')
-        if dealer_card >= 4 and dealer_card <= 6:
+        if dealer_card == 2:
+            if table_info['true_count'] >= 3:
+                return [False,False]
+            else:
+                return [True,False]
+        elif dealer_card == 3:
+            if table_info['true_count'] >= 2:
+                return [False,False]
+            else:
+                return [True,False]
+        elif dealer_card == 4:
+            if table_info['true_count'] < 0:
+                return [True,False]
+            else:
+                return [False,False]
+        elif dealer_card == 5:
+            if table_info['true_count'] < -2:
+                return [True,False]
+            else:
+                return [False,False]
+        elif dealer_card == 6:
+            if table_info['true_count'] < -3:
+                return [True,False]
+            else:
+                return [False,False]
+        elif dealer_card >= 5 and dealer_card <= 6:
             return [False,False]
         else:
             return [True,False]
-    elif(player.score >= 13 and player.score <= 16):
+    elif(player.score == 13):
+        if (dealer_card == 2):
+            if (table_info['true_count'] <= -1):
+                return [True,False]
+            else:
+                return [False,False]
+        elif (dealer_card == 3):
+            if (table_info['true_count'] <= -2):
+                return [True,False]
+            else:
+                return [False,False]
+        elif dealer_card >= 4 and dealer_card <= 6:
+            return [False,False]
+        else:
+            return [True,False]
+    elif(player.score == 14):
         # print('point 13 - 16')
         if dealer_card >= 2 and dealer_card <= 6:
             return [False,False]
+        else:
+            return [True,False]
+    elif(player.score == 15):
+        # print('point 13 - 16')
+        if dealer_card >= 2 and dealer_card <= 6:
+            return [False,False]
+        elif (dealer_card == 10):
+            if (table_info['true_count'] >= 4):
+                return [False,False]
+            else:
+                return [True,False]
+        else:
+            return [True,False]
+    elif(player.score == 16):
+        # print('point 13 - 16')
+        if dealer_card >= 2 and dealer_card <= 6:
+            return [False,False]
+        elif (dealer_card == 9):
+            if (table_info['true_count'] >= 5):
+                return [False,False]
+            else:
+                return [True,False]
+        elif (dealer_card == 10):
+            if (table_info['true_count'] >= 0):
+                return [False,False]
+            else:
+                return [True,False]
         else:
             return [True,False]
     elif(player.score >= 17):
@@ -378,7 +475,7 @@ def filter(player:Player):
         action = Action.Stop
     return action
 
-def card_count_after(is_reshuffle):
+def card_count_after_wonghalf(is_reshuffle):
     global table_info
     if is_reshuffle:
         return
@@ -441,6 +538,60 @@ def card_count_after(is_reshuffle):
     log_info('true_count: ' + str(table_info['true_count']))
     log_info('count_for_insurance: ' + str(table_info['count_for_insurance']))
     log_info('true_count_for_insurance: ' + str(table_info['true_count_for_insurance']))
+
+def card_count_after_hilo(is_reshuffle):
+    global table_info
+    if is_reshuffle:
+        return
+    # Dealer
+    for item in ['dealer_hand_one', 'dealer_hand_two', 'dealer_hand_three', 'dealer_hand_four', 'dealer_hand_five']:
+        dealer_hand = table_info[item]
+        if dealer_hand != '':
+            table_info['remain_card'] -= 1
+        if dealer_hand in ['Two', 'Three', 'Four', 'Five', 'Six']:
+            table_info['count'] += 1
+        elif dealer_hand in ['Seven', 'Eight', 'Nine']:
+            pass
+        elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
+            table_info['count'] -= 1
+
+        if dealer_hand in ['Four', 'Five']:
+            table_info['count_for_insurance'] += 2
+        elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
+            table_info['count_for_insurance'] += 1
+        elif dealer_hand in ['Eight', 'Nine', 'Ace']:
+            pass
+        elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King']:
+            table_info['count_for_insurance'] -= 2
+    # Player
+    for player in ['one', 'two', 'three', 'four']:
+        for layer in ['one', 'two', 'three', 'four']:
+            for hand in ['one', 'two', 'three', 'four', 'five']:
+                player_hand = table_info['player_' + player + '_layer_' + layer + '_hand_' + hand]
+                if player_hand != '':
+                    table_info['remain_card'] -= 1
+                if player_hand in ['Two', 'Three', 'Four', 'Five', 'Six']:
+                    table_info['count'] += 1
+                elif player_hand in ['Seven', 'Eight', 'Nine']:
+                    pass
+                elif player_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
+                    table_info['count'] -= 1
+
+                if dealer_hand in ['Four', 'Five']:
+                    table_info['count_for_insurance'] += 2
+                elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
+                    table_info['count_for_insurance'] += 1
+                elif dealer_hand in ['Eight', 'Nine', 'Ace']:
+                    pass
+                elif dealer_hand in ['Ten', 'Eleven', 'Queen', 'King']:
+                    table_info['count_for_insurance'] -= 2
+    table_info['true_count'] = table_info['count']/(table_info['remain_card']/52)
+    table_info['true_count_for_insurance'] = table_info['count_for_insurance']/(table_info['remain_card']/52)
+    log_info('count: ' + str(table_info['count']))
+    log_info('true_count: ' + str(table_info['true_count']))
+    log_info('count_for_insurance: ' + str(table_info['count_for_insurance']))
+    log_info('true_count_for_insurance: ' + str(table_info['true_count_for_insurance']))
+
 
 def get_betsize():
     global table_info
