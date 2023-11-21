@@ -16,8 +16,8 @@ def initial():
     global table_info
     table_info['count'] = 0
     table_info['true_count'] = 0
-    table_info['count_for_insurance'] = 0
-    table_info['true_count_for_insurance'] = 0
+    # table_info['count_for_insurance'] = 0
+    # table_info['true_count_for_insurance'] = 0
     table_info['remain_card'] = 312
     table_info['dealer_layer'] = 0
     table_info['middle_win_count'] = 0
@@ -497,14 +497,14 @@ def card_count_after_wonghalf(is_reshuffle):
         elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
             table_info['count'] -= 1
 
-        if dealer_hand in ['Four', 'Five']:
-            table_info['count_for_insurance'] += 2
-        elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
-            table_info['count_for_insurance'] += 1
-        elif dealer_hand in ['Eight', 'Nine', 'Ace']:
-            pass
-        elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King']:
-            table_info['count_for_insurance'] -= 2
+        # if dealer_hand in ['Four', 'Five']:
+        #     table_info['count_for_insurance'] += 2
+        # elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
+        #     table_info['count_for_insurance'] += 1
+        # elif dealer_hand in ['Eight', 'Nine', 'Ace']:
+        #     pass
+        # elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King']:
+        #     table_info['count_for_insurance'] -= 2
     # Player
     for player in ['one', 'two', 'three', 'four']:
         for layer in ['one', 'two', 'three', 'four']:
@@ -522,102 +522,128 @@ def card_count_after_wonghalf(is_reshuffle):
                     pass
                 elif player_hand == 'Nine':
                     table_info['count'] -= 0.5
-                elif player_hand in ['Ten', 'Eleven', 'Queen', 'King', 'Ace']:
-                    table_info['count'] -= 1
-                if dealer_hand in ['Four', 'Five']:
-                    table_info['count_for_insurance'] += 2
-                elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
-                    table_info['count_for_insurance'] += 1
-                elif dealer_hand in ['Eight', 'Nine', 'Ace']:
-                    pass
-                elif dealer_hand in ['Ten', 'Eleven', 'Queen', 'King']:
-                    table_info['count_for_insurance'] -= 2
-    table_info['true_count'] = table_info['count']/(table_info['remain_card']/52)
-    table_info['true_count_for_insurance'] = table_info['count_for_insurance']/(table_info['remain_card']/52)
-    log_info('count: ' + str(table_info['count']))
-    log_info('true_count: ' + str(table_info['true_count']))
-    log_info('count_for_insurance: ' + str(table_info['count_for_insurance']))
-    log_info('true_count_for_insurance: ' + str(table_info['true_count_for_insurance']))
-
-def card_count_after_hilo(is_reshuffle):
-    global table_info
-    if is_reshuffle:
-        return
-    # Dealer
-    for item in ['dealer_hand_one', 'dealer_hand_two', 'dealer_hand_three', 'dealer_hand_four', 'dealer_hand_five']:
-        dealer_hand = table_info[item]
-        if dealer_hand != '':
-            table_info['remain_card'] -= 1
-        if dealer_hand in ['Two', 'Three', 'Four', 'Five', 'Six']:
-            table_info['count'] += 1
-        elif dealer_hand in ['Seven', 'Eight', 'Nine']:
-            pass
-        elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
-            table_info['count'] -= 1
-
-        if dealer_hand in ['Four', 'Five']:
-            table_info['count_for_insurance'] += 2
-        elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
-            table_info['count_for_insurance'] += 1
-        elif dealer_hand in ['Eight', 'Nine', 'Ace']:
-            pass
-        elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King']:
-            table_info['count_for_insurance'] -= 2
-    # Player
-    for player in ['one', 'two', 'three', 'four']:
-        for layer in ['one', 'two', 'three', 'four']:
-            for hand in ['one', 'two', 'three', 'four', 'five']:
-                player_hand = table_info['player_' + player + '_layer_' + layer + '_hand_' + hand]
-                if player_hand != '':
-                    table_info['remain_card'] -= 1
-                if player_hand in ['Two', 'Three', 'Four', 'Five', 'Six']:
-                    table_info['count'] += 1
-                elif player_hand in ['Seven', 'Eight', 'Nine']:
-                    pass
                 elif player_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
                     table_info['count'] -= 1
 
-                if dealer_hand in ['Four', 'Five']:
-                    table_info['count_for_insurance'] += 2
-                elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
-                    table_info['count_for_insurance'] += 1
-                elif dealer_hand in ['Eight', 'Nine', 'Ace']:
-                    pass
-                elif dealer_hand in ['Ten', 'Eleven', 'Queen', 'King']:
-                    table_info['count_for_insurance'] -= 2
+
+                # if dealer_hand in ['Four', 'Five']:
+                #     table_info['count_for_insurance'] += 2
+                # elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
+                #     table_info['count_for_insurance'] += 1
+                # elif dealer_hand in ['Eight', 'Nine', 'Ace']:
+                #     pass
+                # elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King']:
+                #     table_info['count_for_insurance'] -= 2
     table_info['true_count'] = table_info['count']/(table_info['remain_card']/52)
-    table_info['true_count_for_insurance'] = table_info['count_for_insurance']/(table_info['remain_card']/52)
+    # table_info['true_count_for_insurance'] = table_info['count_for_insurance']/(table_info['remain_card']/52)
     log_info('count: ' + str(table_info['count']))
     log_info('true_count: ' + str(table_info['true_count']))
-    log_info('count_for_insurance: ' + str(table_info['count_for_insurance']))
-    log_info('true_count_for_insurance: ' + str(table_info['true_count_for_insurance']))
+    # log_info('count_for_insurance: ' + str(table_info['count_for_insurance']))
+    # log_info('true_count_for_insurance: ' + str(table_info['true_count_for_insurance']))
+    for item in ['dealer_hand_one', 'dealer_hand_two', 'dealer_hand_three', 'dealer_hand_four', 'dealer_hand_five']:
+        table_info[item] = ''
+    for player in ['one', 'two', 'three', 'four']:
+        for layer in ['one', 'two', 'three', 'four']:
+            for hand in ['one', 'two', 'three', 'four', 'five']:
+                table_info['player_' + player + '_layer_' + layer + '_hand_' + hand] = ''
 
+
+# def card_count_after_hilo(is_reshuffle):
+#     global table_info
+#     if is_reshuffle:
+#         return
+#     # Dealer
+#     for item in ['dealer_hand_one', 'dealer_hand_two', 'dealer_hand_three', 'dealer_hand_four', 'dealer_hand_five']:
+#         dealer_hand = table_info[item]
+#         if dealer_hand != '':
+#             table_info['remain_card'] -= 1
+#         if dealer_hand in ['Two', 'Three', 'Four', 'Five', 'Six']:
+#             table_info['count'] += 1
+#         elif dealer_hand in ['Seven', 'Eight', 'Nine']:
+#             pass
+#         elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
+#             table_info['count'] -= 1
+
+#         if dealer_hand in ['Four', 'Five']:
+#             table_info['count_for_insurance'] += 2
+#         elif dealer_hand in ['Two', 'Three', 'Six', 'Seven']:
+#             table_info['count_for_insurance'] += 1
+#         elif dealer_hand in ['Eight', 'Nine', 'Ace']:
+#             pass
+#         elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King']:
+#             table_info['count_for_insurance'] -= 2
+#     # Player
+#     for player in ['one', 'two', 'three', 'four']:
+#         for layer in ['one', 'two', 'three', 'four']:
+#             for hand in ['one', 'two', 'three', 'four', 'five']:
+#                 player_hand = table_info['player_' + player + '_layer_' + layer + '_hand_' + hand]
+#                 if player_hand != '':
+#                     table_info['remain_card'] -= 1
+#                 if player_hand in ['Two', 'Three', 'Four', 'Five', 'Six']:
+#                     table_info['count'] += 1
+#                 elif player_hand in ['Seven', 'Eight', 'Nine']:
+#                     pass
+#                 elif player_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
+#                     table_info['count'] -= 1
+
+#                 if player_hand in ['Four', 'Five']:
+#                     table_info['count_for_insurance'] += 2
+#                 elif player_hand in ['Two', 'Three', 'Six', 'Seven']:
+#                     table_info['count_for_insurance'] += 1
+#                 elif player_hand in ['Eight', 'Nine', 'Ace']:
+#                     pass
+#                 elif player_hand in ['Ten', 'Eleven', 'Queen', 'King']:
+#                     table_info['count_for_insurance'] -= 2
+#     table_info['true_count'] = table_info['count']/(table_info['remain_card']/52)
+#     table_info['true_count_for_insurance'] = table_info['count_for_insurance']/(table_info['remain_card']/52)
+#     log_info('count: ' + str(table_info['count']))
+#     log_info('true_count: ' + str(table_info['true_count']))
+#     log_info('count_for_insurance: ' + str(table_info['count_for_insurance']))
+#     log_info('true_count_for_insurance: ' + str(table_info['true_count_for_insurance']))
 
 def get_betsize():
     global table_info
-    betsize = [Betsize.Left, 1]
-    table_info['bet_middle'] = False
-    table_info['bet_right'] = False
-    if table_info['true_count'] < 1.5:
-        betsize = [Betsize.Left, 1]
-    elif (table_info['true_count'] >= 1.5) & (table_info['true_count'] < 4):
-        betsize = [Betsize.Middle, 1]
-        table_info['bet_middle'] = True
-    elif (table_info['true_count'] >= 4) & (table_info['true_count'] < 6):
-        betsize = [Betsize.Right, 1]
-        table_info['bet_middle'] = True
-    elif (table_info['true_count'] >= 6) & (table_info['true_count'] < 8):
-        betsize = [Betsize.Middle, 2]
-        table_info['bet_right'] = True
-    elif (table_info['true_count'] >= 8):
-        betsize = [Betsize.Left, 5]
-        table_info['bet_right'] = True
+    betsize = [[Betsize.Left, 1], [Betsize.Middle, 0], [Betsize.Right, 0]]
+    true_count = round(table_info['true_count'])
+    if true_count < 2:
+        betsize = [[Betsize.Left, 1], [Betsize.Middle, 0], [Betsize.Right, 0]]
+    else:
+        temp_betsize_ten = int((true_count - 1) * 2/10)
+        temp_betsize = int((((true_count - 1) * 2/10) - temp_betsize_ten) * 10)
+        betsize = [[Betsize.Left, 0], [Betsize.Middle, temp_betsize], [Betsize.Right, temp_betsize_ten]]
     return betsize
 
+# def get_betsize():
+#     global table_info
+#     betsize = [Betsize.Left, 1]
+#     table_info['bet_middle'] = False
+#     table_info['bet_right'] = False
+#     if table_info['true_count'] < 2:
+#         betsize = [Betsize.Left, 1]
+#     elif (table_info['true_count'] >= 2) & (table_info['true_count'] < 4):
+#         betsize = [Betsize.Middle, 1]
+#         table_info['bet_middle'] = True
+#     elif (table_info['true_count'] >= 4) & (table_info['true_count'] < 6):
+#         betsize = [Betsize.Right, 1]
+#         table_info['bet_middle'] = True
+#     elif (table_info['true_count'] >= 6) & (table_info['true_count'] < 8):
+#         betsize = [Betsize.Middle, 2]
+#         table_info['bet_right'] = True
+#     elif (table_info['true_count'] >= 8):
+#         betsize = [Betsize.Left, 5]
+#         table_info['bet_right'] = True
+#     return betsize
+
 def place_bet(coordinate_dict, betsize):
-    for i in range(betsize[1]):
-        click(coordinate_dict, betsize[0].value)
-        sleep(0.3)
+    for i in range(betsize[0][1]):
+        click(coordinate_dict, betsize[0][0].value)
+        sleep(0.5)
+    for i in range(betsize[1][1]):
+        click(coordinate_dict, betsize[1][0].value)
+        sleep(0.5)
+    for i in range(betsize[2][1]):
+        click(coordinate_dict, betsize[2][0].value)
+        sleep(0.5)
 
 def check_new_game(coordinate_dict):
     global table_info
@@ -625,8 +651,8 @@ def check_new_game(coordinate_dict):
         log_info('reshuffle!!!!!!!!!!!!')
         table_info['count'] = 0
         table_info['true_count'] = 0
-        table_info['count_for_insurance'] = 0
-        table_info['true_count_for_insurance'] = 0
+        # table_info['count_for_insurance'] = 0
+        # table_info['true_count_for_insurance'] = 0
         table_info['remain_card'] = 312
         return True
     return False
@@ -663,7 +689,7 @@ def card_transfer(card):
         return 'Eight'
     elif card in ['fe)', '9', 'Ad']:
         return 'Nine'
-    elif card in ['10', '0','lO']:
+    elif card in ['10', '0','lO', 'Pe)']:
         return 'Ten'
     elif card == 'J':
         return 'Jack'

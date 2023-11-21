@@ -33,7 +33,8 @@ class Deck:
         elif card_values[c.rank]>= 7 and  card_values[c.rank] <= 9:
             self.hi_low_count+=0
         else:
-            print('878787')
+            pass
+            # print('878787')
         self.hi_low_avg = self.hi_low_count * 52 / len(self.cards)
         return c
 
@@ -215,8 +216,170 @@ class Player:
 #     else:
 #         print('unknown error')
 #         return 1
+
+
+# LTS
+# def decide_splitting(player, dealer_card):
+#     if card_values[player.hand[0].rank] == 2:
+#         if dealer_card >= 2 and dealer_card <= 7:
+#             return True
+#         else:
+#             return False
+#     elif card_values[player.hand[0].rank] == 3:
+#         if dealer_card >= 2 and dealer_card <= 7:
+#             return True
+#         else:
+#             return False
+#     elif card_values[player.hand[0].rank] == 4:
+#         if dealer_card >= 5 and dealer_card <= 6:
+#             return True
+#         else:
+#             return False
+#     elif card_values[player.hand[0].rank] == 5:
+#         return False
+#     elif card_values[player.hand[0].rank] == 6:
+#         if dealer_card >= 2 and dealer_card <= 6:
+#             return True
+#         else:
+#             return False
+#     elif card_values[player.hand[0].rank] == 7:
+#         if dealer_card >= 2 and dealer_card <= 7:
+#             return True
+#         else:
+#             return False
+#     elif card_values[player.hand[0].rank] == 8:
+#         return True
+#     elif card_values[player.hand[0].rank] == 9:
+#         if dealer_card >= 2 and dealer_card <= 9 and dealer_card != 7:
+#             return True
+#         else:
+#             return False
+#     elif card_values[player.hand[0].rank] == 10:
+#         if (dealer_card == 4) & (table_info['true_count'] >= 6):
+#             return True
+#         elif (dealer_card == 5) & (table_info['true_count'] >= 5):
+#             return True
+#         elif (dealer_card == 6) & (table_info['true_count'] >= 4):
+#             return True
+#         else:
+#             return False
+#     else:
+#         return True
     
-def decide_splitting(player,dealer_card):
+# def add_card_or_not(player, dealer_card):
+#     # print('dddddddddddd')
+#     # print(player.hand[0].rank)
+#     # print('dsfdssdf')
+#     # print('min', player.get_min_score())
+#     if player.get_min_score() <= 11 and (len(player.hand) == 4):
+#         return [True,False]
+#     elif player.get_min_score() == 3 and player.aces > 0:
+#         # print('a2')
+#         if dealer_card >= 5 and dealer_card <= 6:
+#             return [True,True]
+#         else:
+#             return [True,False]
+#     elif player.get_min_score() == 4  and player.aces > 0:
+#         # print('a3')
+#         if dealer_card >= 5 and dealer_card <= 6:
+#             return [True,True]
+#         else:
+#             return [True,False]
+#     elif  player.get_min_score() == 5  and player.aces > 0:
+#         # print('a4')
+#         if dealer_card >=4 and dealer_card <= 6:
+#             return [True,True]
+#         else:
+#             return [True,False]
+#     elif  player.get_min_score() == 6  and player.aces > 0:
+#         # print('a5')
+#         if dealer_card >=4 and dealer_card <= 6:
+#             return [True,True]
+#         else:
+#             return [True,False]
+#     elif  player.get_min_score() == 7  and player.aces > 0:
+#         # print('a6')
+#         if dealer_card >=3 and dealer_card <= 6:
+#             return [True,True]
+#         else:
+#             return [True,False]
+#     elif  player.get_min_score() == 8  and player.aces > 0:
+#         # print('a7')
+#         if dealer_card >= 3 and dealer_card <= 6:
+#             return [True,True]
+#         elif dealer_card in [2,7, 8]:
+#             return [False,False]
+#         else:
+#             return [True,False]
+#     elif  player.get_min_score() == 9  and  player.aces > 0:
+#         # print('a8')
+#         return [False,False]
+#     elif  player.get_min_score() == 10 and player.aces > 0:
+#         # print('a9')
+#         return [False,False]      
+#     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 2  and player.score == 4):
+#         # print('22')
+#         return [True,False]
+#     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 3  and player.score == 6):
+#         # print('33')
+#         return [True,False]
+#     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 4  and player.score == 8):
+#         # print('44')
+#         return [True,False]
+#     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 6  and player.score == 12):
+#         # print('66')
+#         return [True,False]
+#     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 7  and player.score == 14):
+#         # print('77')
+#         return [True,False]
+#     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 8  and player.score == 16):
+#         # print('8787878787878787878787878787878')
+#         return 1
+#     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 9  and player.score == 18):
+#         # print('99')
+#         return [False,False]
+#     elif(player.score >= 5 and player.score <= 8):
+#         # print('point 8')
+#         return [True,False]
+#     elif(player.score == 9):
+#         #print('point 9')
+#         if dealer_card >=3 and dealer_card <= 6:
+#             return [True,True]
+#         else:
+#             return [True,False]
+#     elif(player.score == 10):
+#         #print('point 10')
+#         if dealer_card >=2 and dealer_card <= 9:
+#             return [True,True]
+#         else:
+#             return [True,False]
+#     elif(player.score == 11):
+#         #print('point 11')
+#         if dealer_card >=2 and dealer_card <= 10:
+#             return [True,True]
+#         else:
+#             return [True,False]
+#     elif(player.score == 12):
+#         #print('point 12')
+#         if dealer_card >=4 and dealer_card <= 6:
+#             return [False,False]
+#         else:
+#             return [True,False]
+#     elif(player.score >= 13 and player.score <=16):
+#         #print('point 13 - 16')
+#         if dealer_card >=2 and dealer_card <= 6:
+#             return [False,False]
+#         else:
+#             return [True,False]
+#     elif(player.score >= 17):
+#         return [False,False]
+#     else:
+#         print('unknown error')
+#         return 1
+    
+
+# NEW
+def decide_splitting(player, dealer_card):
     if card_values[player.hand[0].rank] == 2:
         if dealer_card >= 2 and dealer_card <= 7:
             return True
@@ -252,118 +415,224 @@ def decide_splitting(player,dealer_card):
         else:
             return False
     elif card_values[player.hand[0].rank] == 10:
-        return False
+        if (dealer_card == 4) & (table_info['true_count'] >= 6):
+            return True
+        elif (dealer_card == 5) & (table_info['true_count'] >= 5):
+            return True
+        elif (dealer_card == 6) & (table_info['true_count'] >= 4):
+            return True
+        else:
+            return False
     else:
         return True
     
-def add_card_or_not(player,dealer_card):
-    print('min',player.get_min_score())
+def add_card_or_not(player, dealer_card):
+    # print('dddddddddddd')
+    # print(player.hand[0].rank)
+    # print('dsfdssdf')
+    # print('min', player.get_min_score())
     if player.get_min_score() <= 11 and (len(player.hand) == 4):
         return [True,False]
     elif player.get_min_score() == 3 and player.aces > 0:
-        print('a2')
+        # print('a2')
         if dealer_card >= 5 and dealer_card <= 6:
             return [True,True]
         else:
             return [True,False]
     elif player.get_min_score() == 4  and player.aces > 0:
-        print('a3')
+        # print('a3')
         if dealer_card >= 5 and dealer_card <= 6:
             return [True,True]
         else:
             return [True,False]
     elif  player.get_min_score() == 5  and player.aces > 0:
-        print('a4')
+        # print('a4')
         if dealer_card >=4 and dealer_card <= 6:
             return [True,True]
         else:
             return [True,False]
     elif  player.get_min_score() == 6  and player.aces > 0:
-        print('a5')
+        # print('a5')
         if dealer_card >=4 and dealer_card <= 6:
             return [True,True]
         else:
             return [True,False]
     elif  player.get_min_score() == 7  and player.aces > 0:
-        print('a6')
+        # print('a6')
         if dealer_card >=3 and dealer_card <= 6:
             return [True,True]
         else:
             return [True,False]
     elif  player.get_min_score() == 8  and player.aces > 0:
-        print('a7')
-        if dealer_card >=3 and dealer_card <= 6:
+        # print('a7')
+        if dealer_card >= 2 and dealer_card <= 6:
             return [True,True]
-        elif dealer_card in [2 ,7,8]:
+        elif dealer_card in [7, 8]:
             return [False,False]
         else:
             return [True,False]
     elif  player.get_min_score() == 9  and  player.aces > 0:
-        print('a8')
-        return [False,False]
+        # print('a8')
+        if dealer_card == 6:
+            return [True,True]
+        elif (dealer_card == 4) & (table_info['true_count'] >= 3):
+            return [True,True]
+        else:
+            return [False,False]
     elif  player.get_min_score() == 10 and player.aces > 0:
-        print('a9')
+        # print('a9')
         return [False,False]      
     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 2  and player.score == 4):
-        print('22')
+        # print('22')
         return [True,False]
     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 3  and player.score == 6):
-        print('33')
+        # print('33')
         return [True,False]
     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 4  and player.score == 8):
-        print('44')
+        # print('44')
         return [True,False]
     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 6  and player.score == 12):
-        print('66')
+        # print('66')
         return [True,False]
     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 7  and player.score == 14):
-        print('77')
+        # print('77')
         return [True,False]
     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 8  and player.score == 16):
-        print('8787878787878787878787878787878')
+        # print('8787878787878787878787878787878')
         return 1
     elif (card_values[player.hand[0].rank] == card_values[player.hand[1].rank]) and (card_values[player.hand[0].rank] == 9  and player.score == 18):
-        print('99')
+        # print('99')
         return [False,False]
     elif(player.score >= 5 and player.score <= 8):
-        print('point 8')
+        # print('point 8')
         return [True,False]
     elif(player.score == 9):
-        print('point 9')
-        if dealer_card >=3 and dealer_card <= 6:
+        # print('point 9')
+        if dealer_card == 2:
+            if table_info['true_count'] >= 1:
+                return [True,True]
+            else:
+                return [True,False]
+        elif dealer_card == 7:
+            if table_info['true_count'] >= 3:
+                return [True,True]
+            else:
+                return [True,False]
+        elif dealer_card >=3 and dealer_card <= 6:
             return [True,True]
         else:
             return [True,False]
     elif(player.score == 10):
-        print('point 10')
+        # print('point 10')
         if dealer_card >=2 and dealer_card <= 9:
             return [True,True]
+        elif dealer_card == 10:
+            if table_info['true_count'] >= 4:
+                return [True,True]
+            else:
+                return [True,False]
+        elif dealer_card == 11:
+            if table_info['true_count'] >= 4:
+                return [True,True]
+            else:
+                return [True,False]
         else:
             return [True,False]
     elif(player.score == 11):
-        print('point 11')
+        # print('point 11')
         if dealer_card >=2 and dealer_card <= 10:
             return [True,True]
+        elif dealer_card == 11:
+            if table_info['true_count'] >= 1:
+                return [True,True]
+            else:
+                return [True,False]
         else:
             return [True,False]
     elif(player.score == 12):
-        print('point 12')
-        if dealer_card >=4 and dealer_card <= 6:
+        # print('point 12')
+        if dealer_card == 2:
+            if table_info['true_count'] >= 3:
+                return [False,False]
+            else:
+                return [True,False]
+        elif dealer_card == 3:
+            if table_info['true_count'] >= 2:
+                return [False,False]
+            else:
+                return [True,False]
+        elif dealer_card == 4:
+            if table_info['true_count'] < 0:
+                return [True,False]
+            else:
+                return [False,False]
+        elif dealer_card == 5:
+            if table_info['true_count'] < -2:
+                return [True,False]
+            else:
+                return [False,False]
+        elif dealer_card == 6:
+            if table_info['true_count'] < -3:
+                return [True,False]
+            else:
+                return [False,False]
+        elif dealer_card >= 5 and dealer_card <= 6:
             return [False,False]
         else:
             return [True,False]
-    elif(player.score >= 13 and player.score <=16):
-        print('point 13 - 16')
-        if dealer_card >=2 and dealer_card <= 6:
+    elif(player.score == 13):
+        if (dealer_card == 2):
+            if (table_info['true_count'] <= -1):
+                return [True,False]
+            else:
+                return [False,False]
+        elif (dealer_card == 3):
+            if (table_info['true_count'] <= -2):
+                return [True,False]
+            else:
+                return [False,False]
+        elif dealer_card >= 4 and dealer_card <= 6:
             return [False,False]
+        else:
+            return [True,False]
+    elif(player.score == 14):
+        # print('point 13 - 16')
+        if dealer_card >= 2 and dealer_card <= 6:
+            return [False,False]
+        else:
+            return [True,False]
+    elif(player.score == 15):
+        # print('point 13 - 16')
+        if dealer_card >= 2 and dealer_card <= 6:
+            return [False,False]
+        elif (dealer_card == 10):
+            if (table_info['true_count'] >= 4):
+                return [False,False]
+            else:
+                return [True,False]
+        else:
+            return [True,False]
+    elif(player.score == 16):
+        # print('point 13 - 16')
+        if dealer_card >= 2 and dealer_card <= 6:
+            return [False,False]
+        elif (dealer_card == 9):
+            if (table_info['true_count'] >= 5):
+                return [False,False]
+            else:
+                return [True,False]
+        elif (dealer_card == 10):
+            if (table_info['true_count'] >= 0):
+                return [False,False]
+            else:
+                return [True,False]
         else:
             return [True,False]
     elif(player.score >= 17):
         return [False,False]
     else:
-        print('unknown error')
         return 1
-     
+    
 # 定義遊戲流程
 def blackjack_game(deck, dealer, default_card, player_list: list):
     # 初始化玩家
@@ -386,7 +655,7 @@ def blackjack_game(deck, dealer, default_card, player_list: list):
         split_or_not = decide_splitting(player, card_values[dealer.hand[0].rank])
         if split_or_not:
             player_list.remove(player)
-            print('split!!!!!!!!!!!!')
+            # print('split!!!!!!!!!!!!')
             blackjack_game(deck, dealer, player.hand[0], player_list)
             blackjack_game(deck, dealer, player.hand[1], player_list)
             return
@@ -399,10 +668,10 @@ def blackjack_game(deck, dealer, default_card, player_list: list):
             round_max = 1
         # 遊戲迴圈
         while (round <=  round_max) and (player.double_or_not == False):
-            print(f"Your cards: {', '.join(str(card) for card in player.hand)}")
-            print(f"Your score: {player.score}")
+            # print(f"Your cards: {', '.join(str(card) for card in player.hand)}")
+            # print(f"Your score: {player.score}")
             banker_showed_card =  dealer.hand[0]
-            print(f"dealer cards: {banker_showed_card}")
+            # print(f"dealer cards: {banker_showed_card}")
 
             # 根據表決定是否補牌
             if (player_not_bust):
@@ -414,10 +683,10 @@ def blackjack_game(deck, dealer, default_card, player_list: list):
                     player.double_or_not = True
                     if (player.double_or_not):
                         round_max = 1
-                        print('this hand double')
+                        # print('this hand double')
                 #choice = input("Do you want to draw another card? (y/n): ").lower()
                 if draw_card_or_not :
-                    print('decide to draw hand')
+                    # print('decide to draw hand')
                     player.add_card(deck.deal())
                     player.adjust_for_ace()
                     # 判斷玩家是否爆牌
@@ -434,12 +703,32 @@ def blackjack_game(deck, dealer, default_card, player_list: list):
         if round == 3 and player.score <= 21:
             player.fiver_little_cards = True
     else:
-        if(dealer.blackjack_or_not):
-            print('dealer_blackjack')
-        else:
-            print('player_blackjack')
+        pass
+        # if(dealer.blackjack_or_not):
+        #     print('dealer_blackjack')
+        # else:
+        #     print('player_blackjack')
    
     return
+
+def card_count_after_wonghalf(player:Player, deck:Deck):
+    global table_info
+    # Dealer
+    for item in player.hand:
+        dealer_hand = item.rank
+        if dealer_hand == 'Five':
+            table_info['count'] += 1.5
+        elif dealer_hand in ['Three', 'Four', 'Six']:
+            table_info['count'] += 1
+        elif dealer_hand in ['Two', 'Seven']:
+            table_info['count'] += 0.5
+        elif dealer_hand == 'Eight':
+            pass
+        elif dealer_hand == 'Nine':
+            table_info['count'] -= 0.5
+        elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
+            table_info['count'] -= 1
+    table_info['true_count'] = table_info['count']/len(deck.cards)*52
 
 def card_count_after_hilo(player:Player, deck:Deck):
     global table_info
@@ -452,25 +741,68 @@ def card_count_after_hilo(player:Player, deck:Deck):
             pass
         elif dealer_hand in ['Ten', 'Jack', 'Queen', 'King', 'Ace']:
             table_info['count'] -= 1
-    table_info['true_count'] = table_info['count']/len(deck.cards)
-    # log_info('count: ' + str(table_info['count']))
-    # log_info('true_count: ' + str(table_info['true_count']))
-    # log_info('count_for_insurance: ' + str(table_info['count_for_insurance']))
-    # log_info('true_count_for_insurance: ' + str(table_info['true_count_for_insurance']))
+    table_info['true_count'] = table_info['count']/len(deck.cards)*52
 
+# # LTS
+# def get_betsize():
+#     global table_info
+#     betsize = 50
+#     if table_info['true_count'] <= 1.5:
+#         betsize = 50
+#     elif (table_info['true_count'] > 1.5) & (table_info['true_count'] <= 3):      
+#         betsize = 100             
+#     else:
+#         betsize = 150                                                     
+#     return betsize
+
+# NEW
+# def get_betsize():
+#     global table_info
+#     betsize = 0
+#     if table_info['true_count'] < 2:
+#         betsize = 0
+#     elif (table_info['true_count'] >= 2) & (table_info['true_count'] < 4):
+#         betsize = 100                                                              
+#     elif (table_info['true_count'] >= 4) & (table_info['true_count'] < 6):
+#         betsize = 150
+#     elif (table_info['true_count'] >= 6) & (table_info['true_count'] < 8):
+#         betsize = 200
+#     elif (table_info['true_count'] >= 8):
+#         betsize = 250
+#     return betsize
+
+# temp
+# def get_betsize():
+#     global table_info
+#     betsize = 0
+#     if table_info['true_count'] <= 1.5:
+#         betsize = 50
+#     elif (table_info['true_count'] > 1.5) & (table_info['true_count'] <= 3):
+#         betsize = 300                                                  
+#     elif (table_info['true_count'] > 3) & (table_info['true_count'] <= 6):
+#         betsize = 600
+#     elif (table_info['true_count'] > 6) & (table_info['true_count'] <= 8):
+#         betsize = 900
+#     elif (table_info['true_count'] > 8):
+#         betsize = 1200
+#     return betsize
+
+# MIT
 def get_betsize():
     global table_info
-    betsize = 50
-    if table_info['true_count'] < 2:
+    betsize = 0
+    true_count = round(table_info['true_count'])
+    # print('true_count:', true_count)
+    # print('true_count:',true_count)
+    if true_count < 2:
         betsize = 50
-    elif (table_info['true_count'] >= 2) & (table_info['true_count'] < 4):
-        betsize = 100
-    elif (table_info['true_count'] >= 4) & (table_info['true_count'] < 6):
-        betsize = 150
-    elif (table_info['true_count'] >= 6) & (table_info['true_count'] < 8):
-        betsize = 200
-    elif (table_info['true_count'] >= 8):
-        betsize = 250
+    else:
+        # temp_betsize_ten = int((true_count - 1) * 2/10)
+        # temp_betsize = (((true_count - 1) * 2/10) - temp_betsize_ten) * 10
+        # print('temp_betsize_ten:', temp_betsize_ten)
+        # print('temp_betsize:', temp_betsize)
+        betsize = (true_count - 1) * 200
+        # print('betsize:', betsize)
     return betsize
 
 # 開始遊戲
@@ -505,49 +837,49 @@ def point_count(br, bet, player: Player, dealer: Player, player_win_count, playe
                         player_win_count += 1
                         br += final_bet * special_card*0.95
                         total_water += final_bet * special_card*0.05
-                        print("Congratulations! You win!, your five litte is smaller than dealer" )
+                        # print("Congratulations! You win!, your five litte is smaller than dealer" )
                     else:
                         player_lose_count += 1
                         br -= final_bet
-                        print("Sorry, you lose. dealer five little is smaller than you")
+                        # print("Sorry, you lose. dealer five little is smaller than you")
                 else:
                     player_win_count += 1
                     br += final_bet * special_card*0.95
                     total_water += final_bet * special_card*0.05
-                    print("Congratulations! You win! you are five little and dealer is not")
+                    # print("Congratulations! You win! you are five little and dealer is not")
             else:
                 if dealer.fiver_little_cards:
                     player_lose_count += 1
                     br -= final_bet
-                    print("Sorry, you lose.dealer fiver little and you don't")
+                    # print("Sorry, you lose.dealer fiver little and you don't")
                 else:
                     if dealer.score > 21 or player.score > dealer.score:
                         player_win_count += 1
                         br += final_bet *0.95
                         total_water += final_bet * 0.05
-                        print("Congratulations! You win!")
+                        # print("Congratulations! You win!")
                     elif  player.score == dealer.score :
                         Tie = True
                     else:
                         player_lose_count += 1
                         br -= final_bet 
-                        print("Sorry, you lose.")
+                        # print("Sorry, you lose.")
         else:
             player_lose_count += 1
             br -= final_bet 
-            print("Sorry, you lose.")
-    print('player_lose_count',player_lose_count)
-    print('player_win_count',player_win_count)
-    print('br',round(br, 2))
-    print('total_water',round(total_water*0.89, 2))
-    print('win_loss_without_water',round(br + total_water*0.89,2))
+            # print("Sorry, you lose.")
+    # print('player_lose_count',player_lose_count)
+    # print('player_win_count',player_win_count)
+    # print('br',br)
+    # print('total_water',total_water)
+    # print('win_loss_without_water',br + total_water*0.89)
     return player_win_count, player_lose_count, br,total_water
 
-def start(player_win_count, player_lose_count, br ,total_water):
+def start(player_win_count, player_lose_count, br ,total_water,hand_count):
     deck = Deck()
     table_info['true_count'] = 0
     table_info['count'] = 0
-    while (len(deck.cards) > 156):
+    while (len(deck.cards) > 125):
         bet = get_betsize()
         # 這邊會不會跟著變動
         player_list = []
@@ -577,17 +909,19 @@ def start(player_win_count, player_lose_count, br ,total_water):
             if (dealer_add_card_count == 3) and (dealer.score <= 21):
                 dealer.fiver_little_cards = True
         # 計分
-        print('player_list:', player_list)
-        if len(player_list) >= 3:
-            print('three split')
+        # print('player_list:', player_list)
+        # if len(player_list) >= 3:
+            # print('three split')
         for player in player_list:
-            print(f"Your cards: {', '.join(str(card) for card in player.hand)}")
-            print(f"\nYour final score: {player.score}")
-            print(f"Dealer's cards: {', '.join(str(card) for card in dealer.hand)}")
-            print(f"Dealer's score: {dealer.score}")
+            # print(f"Your cards: {', '.join(str(card) for card in player.hand)}")
+            # print(f"\nYour final score: {player.score}")
+            # print(f"Dealer's cards: {', '.join(str(card) for card in dealer.hand)}")
+            # print(f"Dealer's score: {dealer.score}")
+            hand_count +=1
             player_win_count, player_lose_count, br,total_water = point_count(br, bet, player, dealer, player_win_count, player_lose_count,total_water)
         for player in player_list+[dealer]:
-            card_count_after_hilo(player, deck)
+            card_count_after_wonghalf(player, deck)
+            # card_count_after_hilo(player, deck)
 
         # win_count = player_win_count - old_win_count
         # lose_count = player_lose_count - old_lose_count
@@ -709,7 +1043,7 @@ def start(player_win_count, player_lose_count, br ,total_water):
         #         bust_count = hi_low_table['0'][3]
         #     hi_low_table['0'] = [win_count, lose_count, win_rate, bust_count, bust_count/(win_count+lose_count)]
         # print('left card num', len(deck.cards))
-    return player_win_count, player_lose_count, br,total_water
+    return player_win_count, player_lose_count, br,total_water,hand_count
 count = 0
 player_win_count = 0
 player_lose_count = 0
@@ -729,9 +1063,17 @@ total_water = 0
 # hi_low_table['-5'] = [0, 1, 0, 0, 0]
 # hi_low_table['-6'] = [0, 1, 0, 0, 0]
 # hi_low_table['0'] = [0, 1 ,0, 0, 0]
-while count <= 20000:
-    player_win_count, player_lose_count, br,total_water = start(player_win_count, player_lose_count, br,total_water)
-    count += 1
 
+
+roop = 500000
+hand_count = 0
+while count <= roop:
+    player_win_count, player_lose_count, br,total_water,hand_count = start(player_win_count, player_lose_count, br,total_water,hand_count)
+    count += 1
+print('br',br)
+print('total_water',total_water)
+print('win_lose_include_return water',(br + total_water*0.89))
+print('hand_count',hand_count)
+print('final_result on per 1000 hand:',(br + total_water*0.89)/hand_count*1000)
 
 # print(hi_low_table)

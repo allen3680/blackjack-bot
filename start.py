@@ -64,7 +64,7 @@ def main():
                 is_reshuffle = check_new_game(play_coordinate_dict)
             # 打牌
             if super_match(play_coordinate_dict, 'confirm_button'):
-                card_count_after_hilo(is_reshuffle)
+                card_count_after_wonghalf(is_reshuffle)
                 if not super_rgb_match(play_coordinate_dict, 'player_one_place_bet_label'):
                     betsize = get_betsize()
                     place_bet(play_coordinate_dict, betsize)
@@ -122,7 +122,7 @@ def main():
             log_warning('error:' + traceback.format_exc())
             datetime.datetime.now().strftime('%Y%m%d%H%M%S')
         finally:
-            sleep(0.5)
+            sleep(0.3)
 
 
 
