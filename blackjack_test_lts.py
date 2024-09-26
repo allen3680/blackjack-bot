@@ -1,4 +1,5 @@
 import random
+from matplotlib import pyplot as plt
 table_info = dict()
 
 # 定義卡片組
@@ -809,6 +810,7 @@ def get_betsize():
 def point_count(br, bet, player: Player, dealer: Player, player_win_count, player_lose_count,total_water):
     if player.split_or_not:
         special_card = 1
+        player.blackjack_or_not = False
     else:
         special_card = 1.5
     if player.blackjack_or_not:
@@ -835,8 +837,8 @@ def point_count(br, bet, player: Player, dealer: Player, player_win_count, playe
                 if dealer.fiver_little_cards :
                     if player.score < dealer.score:
                         player_win_count += 1
-                        br += final_bet * special_card*0.95
-                        total_water += final_bet * special_card*0.05
+                        br += final_bet * 1.5*0.95
+                        total_water += final_bet * 1.5*0.05
                         # print("Congratulations! You win!, your five litte is smaller than dealer" )
                     else:
                         player_lose_count += 1
@@ -844,14 +846,14 @@ def point_count(br, bet, player: Player, dealer: Player, player_win_count, playe
                         # print("Sorry, you lose. dealer five little is smaller than you")
                 else:
                     player_win_count += 1
-                    br += final_bet * special_card*0.95
-                    total_water += final_bet * special_card*0.05
+                    br += final_bet * 1.5*0.95
+                    total_water += final_bet * 1.5*0.05
                     # print("Congratulations! You win! you are five little and dealer is not")
             else:
                 if dealer.fiver_little_cards:
                     player_lose_count += 1
                     br -= final_bet
-                    # print("Sorry, you lose.dealer fiver little and you don't")
+                    #print("Sorry, you lose.dealer fiver little and you don't")
                 else:
                     if dealer.score > 21 or player.score > dealer.score:
                         player_win_count += 1
@@ -1065,11 +1067,24 @@ total_water = 0
 # hi_low_table['0'] = [0, 1 ,0, 0, 0]
 
 
-roop = 500000
+# 一周大概10萬手(4台的話)
+week_count = 48             # 一年
+week_deck = 2850
+roop = week_deck*week_count
 hand_count = 0
+weekly_winlose_list = []
+b = 0
+last_hand_count = 0
+last_br = 0
+last_total_water = 0
 while count <= roop:
     player_win_count, player_lose_count, br,total_water,hand_count = start(player_win_count, player_lose_count, br,total_water,hand_count)
     count += 1
+    if hand_count/100000 > (len(weekly_winlose_list)+1):
+        temp = round((br-last_br + (total_water-last_total_water)*0.89)/10000,2)
+        weekly_winlose_list.append(temp)
+        last_br = br
+        last_total_water = total_water
 print('br',br)
 print('total_water',total_water)
 print('win_lose_include_return water',(br + total_water*0.89))
@@ -1077,3 +1092,19 @@ print('hand_count',hand_count)
 print('final_result on per 1000 hand:',(br + total_water*0.89)/hand_count*1000)
 
 # print(hi_low_table)
+
+
+print(weekly_winlose_list)
+lose_max = 0
+total = 0
+for a in weekly_winlose_list:
+    if lose_max > a:
+        lose_max = a
+    total +=a
+
+
+print('lose max in '+str(week_count)+' weeks',lose_max)
+print('average_week_win_lose',total/week_count)
+
+plt.bar(range(week_count),weekly_winlose_list)
+plt.show()

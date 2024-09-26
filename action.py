@@ -55,7 +55,7 @@ def get_hand(coordinate_dict):
     # Dealer
     for hand in ['one', 'two', 'three', 'four', 'five']:
         table_info['dealer_hand_' + hand] = ''
-    table_info['dealer_hand_one'] = card_transfer(super_ocr(coordinate_dict, 'dealer_hand_one', 'basic'))
+    table_info['dealer_hand_one'] = card_transfer(super_ocr(coordinate_dict, 'dealer_hand_one', 'basic'), './screenshot/dealer_hand_one_new.png')
     log_info('進行中 dealer_hand_one: ' + str(table_info['dealer_hand_one']))
     # Player
     for player in ['one']:
@@ -91,11 +91,11 @@ def get_hand(coordinate_dict):
         # 截圖辨識牌面
         for i in range(table_info['player_' + player + '_layer_' + layer_now + '_card']):
             screenshot(coordinate_dict['player_' + player + '_hand_' + hand_num_list[i]].split(',')[0], int(coordinate_dict['player_' + player + '_hand_' + hand_num_list[i]].split(',')[1]) + offset_convert[layer_now], coordinate_dict['player_' + player + '_hand_' + hand_num_list[i]].split(',')[2], coordinate_dict['player_' + player + '_hand_' + hand_num_list[i]].split(',')[3], './screenshot/player_' + player + '_hand_' + hand_num_list[i] + '_new.png')
-            table_info['player_' + player + '_hand_' + hand_num_list[i]] = card_transfer(ocr_basic('./screenshot/player_' + player + '_hand_' + hand_num_list[i] + '_new.png'))
+            table_info['player_' + player + '_hand_' + hand_num_list[i]] = card_transfer(ocr_basic('./screenshot/player_' + player + '_hand_' + hand_num_list[i] + '_new.png'), './screenshot/player_' + player + '_hand_' + hand_num_list[i] + '_new.png')
             log_info('進行中 player_' + player + '_hand_' + hand_num_list[i] + ': ' + str(table_info['player_' + player + '_hand_' + hand_num_list[i]]))
     return
 
-def get_all_hand_img(coordinate_dict):
+def get_all_hand_img(coordinate_dict, dealer_is_blackjack):
     global table_info
     layer_convert = {'one': 'two', 'two': 'three', 'three': 'four', 'four': ''}
     card_convert = {'three': 2, 'four': 3, 'five': 4}
@@ -108,21 +108,28 @@ def get_all_hand_img(coordinate_dict):
             table_info['player_' + player + '_layer_' + layer + '_card'] = 0
             table_info['player_' + player + '_layer_' + layer + '_is_double'] = False
     # Dealer
-    is_card_match = False
-    for card in ['three', 'four', 'five']:
-        if super_rgb_match(coordinate_dict, 'dealer_card_' + card):
-            is_card_match = True
-            table_info['dealer_layer'] = card_convert[card]
-            break
-    if not is_card_match:
-        table_info['dealer_layer'] = 5
-    for i in range(table_info['dealer_layer']):
-        screenshot(coordinate_dict['dealer_hand_' + hand_num_list[i]].split(',')[0], coordinate_dict['dealer_hand_' + hand_num_list[i]].split(',')[1], coordinate_dict['dealer_hand_' + hand_num_list[i]].split(',')[2], coordinate_dict['dealer_hand_' + hand_num_list[i]].split(',')[3], './screenshot/dealer_hand_' + hand_num_list[i] + '_new.png')
-    log_info('結束後 Dealer牌數: ' + str(table_info['dealer_layer']))
+    if not dealer_is_blackjack:
+        is_card_match = False
+        for card in ['three', 'four', 'five']:
+            if super_rgb_match(coordinate_dict, 'dealer_card_' + card):
+                is_card_match = True
+                table_info['dealer_layer'] = card_convert[card]
+                break
+        if not is_card_match:
+            table_info['dealer_layer'] = 5
+        for i in range(table_info['dealer_layer']):
+            screenshot(coordinate_dict['dealer_hand_' + hand_num_list[i]].split(',')[0], coordinate_dict['dealer_hand_' + hand_num_list[i]].split(',')[1], coordinate_dict['dealer_hand_' + hand_num_list[i]].split(',')[2], coordinate_dict['dealer_hand_' + hand_num_list[i]].split(',')[3], './screenshot/dealer_hand_' + hand_num_list[i] + '_new.png')
+        log_info('結束後 Dealer牌數: ' + str(table_info['dealer_layer']))
     # Player
     for player in ['one', 'two', 'three', 'four']:
-        if not super_match(coordinate_dict, 'player_' + player + '_place_bet_label'):
-            continue
+        table_info['player_' + player + '_playing'] = 'False'
+        if (not super_match(coordinate_dict, 'player_' + player + '_place_bet_label')):
+            if (not super_match(coordinate_dict, 'player_' + player + '_place_bet_label_1')):
+                if (not super_rgb_match(coordinate_dict, 'player_' + player + '_blue_bet_label')):
+                    if not ((player == 'one') & (super_match(coordinate_dict, 'player_one_score_red_label'))):
+                        if not ((player == 'one') & (super_match(coordinate_dict, 'player_one_score_green_label'))):
+                            continue
+        table_info['player_' + player + '_playing'] = 'True'
         # 判斷層數
         is_layer_match = False
         for layer in ['one', 'two', 'three', 'four']:
@@ -161,7 +168,7 @@ def get_all_hand_img(coordinate_dict):
                 break
     return
 
-def get_all_hand_value(coordinate_dict):
+def get_all_hand_value(dealer_is_blackjack):
     global table_info
     hand_num_list = ['one', 'two', 'three', 'four', 'five']
     # 初始化
@@ -173,23 +180,29 @@ def get_all_hand_value(coordinate_dict):
                 table_info['player_' + player + '_layer_' + layer + '_hand_' + hand] = ''
     # Dealer
     log_info('Dealer')
-    for i in range(table_info['dealer_layer']):
-        table_info['dealer_hand_' + hand_num_list[i]] = card_transfer(ocr_basic('./screenshot/dealer_hand_' + hand_num_list[i] + '_new.png'))
-        log_info('結束後 dealer_hand_' + hand_num_list[i] + ': ' + str(table_info['dealer_hand_' + hand_num_list[i]]))
+    if dealer_is_blackjack:
+        table_info['dealer_hand_one'] = 'Ace'
+        table_info['dealer_hand_two'] = 'King'
+        log_info('結束後 dealer_hand_one: ' + str(table_info['dealer_hand_one']))
+        log_info('結束後 dealer_hand_two: ' + str(table_info['dealer_hand_two']))
+    else:
+        for i in range(table_info['dealer_layer']):
+            table_info['dealer_hand_' + hand_num_list[i]] = card_transfer(ocr_basic('./screenshot/dealer_hand_' + hand_num_list[i] + '_new.png'), './screenshot/dealer_hand_' + hand_num_list[i] + '_new.png')
+            log_info('結束後 dealer_hand_' + hand_num_list[i] + ': ' + str(table_info['dealer_hand_' + hand_num_list[i]]))
     # Player
     for player in ['one', 'two', 'three', 'four']:
-        if not super_match(coordinate_dict, 'player_' + player + '_place_bet_label'):
+        if table_info['player_' + player + '_playing'] == 'False':
             continue
         log_info('Player ' + player)
         # 辨識牌面
         for layer in ['one', 'two', 'three', 'four']:
             # Other
             for i in range(table_info['player_' + player + '_layer_' + layer + '_card']):
-                table_info['player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i]] = card_transfer(ocr_basic('./screenshot/player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i] + '_new.png'))
+                table_info['player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i]] = card_transfer(ocr_basic('./screenshot/player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i] + '_new.png'), './screenshot/player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i] + '_new.png')
                 log_info('結束後 player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i] + ': ' + str(table_info['player_' + player + '_layer_' + layer + '_hand_' + hand_num_list[i]]))
             # Double
             if table_info['player_' + player + '_layer_' + layer + '_is_double']:
-                table_info['player_' + player + '_layer_' + layer + '_hand_three'] = card_transfer(ocr_basic_rotate('./screenshot/player_' + player + '_layer_' + layer + '_double_card_new.png'))
+                table_info['player_' + player + '_layer_' + layer + '_hand_three'] = card_transfer(ocr_basic_rotate('./screenshot/player_' + player + '_layer_' + layer + '_double_card_new.png'), './screenshot/player_' + player + '_layer_' + layer + '_double_card_new.png')
                 log_info('結束後 player_' + player + '_layer_' + layer + '_hand_three: ' + str(table_info['player_' + player + '_layer_' + layer + '_hand_three']))
             if layer == table_info['player_' + player + '_layer']:
                 break
@@ -460,7 +473,7 @@ def filter(player:Player):
     banker_showed_card = table_info['dealer_hand_one']
     action = Action.Stop
     # 決定分不分牌
-    if (card_values[player.hand[0]] == card_values[player.hand[1]]):
+    if (player.hand[0] == player.hand[1]):
         if decide_splitting(player, card_values[banker_showed_card]):
             action = Action.Split
             return action
@@ -670,7 +683,7 @@ def move(coordinate_dict, action):
     elif action == Action.Stop:
         click(coordinate_dict, 'stop_button')
 
-def card_transfer(card):
+def card_transfer(card, img):
     if card == 'A':
         return 'Ace'
     elif card == '2':
@@ -695,12 +708,14 @@ def card_transfer(card):
         return 'Jack'
     elif card in ['Q', 'e]']:
         return 'Queen'
-    elif card == 'K':
+    elif card in ['K', 'K-', 'K.']:
         return 'King'
     elif card == '':
         return ''
     else:
-        log_info('unknown card!!!!!! card: ' + str(card))
+        temp_uuid = str(uuid.uuid4())
+        log_info('unknown card!!!!!! card: ' + str(card) + ' uuid: ' + temp_uuid)
+        os.rename(img,'./screenshot/' + temp_uuid + '.png')
         return ''
 
 def count_win_loss():
